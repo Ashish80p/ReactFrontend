@@ -5,9 +5,9 @@ phases:
     commands:
       - echo Logging in to DockerHub...
       - echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USER" --password-stdin
-      - REPOSITORY_URI="docker.io/ashish80p/frontend"
-      - CONTAINER_NAME="frontend-container"
-      - IMAGE_TAG="latest"
+      - export REPOSITORY_URI="docker.io/ashish80p/frontend"
+      - export CONTAINER_NAME="frontend-container"
+      - export IMAGE_TAG="latest"
   build:
     commands:
       - echo Build started on `date`
